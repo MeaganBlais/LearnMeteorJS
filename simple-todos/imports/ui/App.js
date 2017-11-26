@@ -28,16 +28,6 @@ class App extends Component {
 
     //Clear Form
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
-
-    Tasks.insert({
-      text,
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
-    });
-
-    //clear form
-    ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
 
   toggleHideCompleted() {
